@@ -16,6 +16,13 @@
 			href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap"
 			rel="stylesheet"
 		/>
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css"
+			integrity="sha512-10/jx2EXwxxWqCLX/hHth/vu2KY3jCF70dCQB8TSgNjbCVAC/8vai53GfMDrO2Emgwccf2pJqxct9ehpzG+MTw=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		/>
 		<link rel="stylesheet" href="style.css" />
 		<title>Document</title>
 	</head>
@@ -59,8 +66,7 @@
 		<main>
 			<div class="container">
 				<div
-					class="hero-section text-center text-sm-start d-md-flex justify-content-center align-items-center"
-					style="height: 90vh"
+					class="hero-section text-center text-sm-start d-sm-flex justify-content-center align-items-center"
 				>
 					<div class="right-panel mx-5 my-3">
 						<h1 class="hero-title fw-bold"
@@ -68,9 +74,9 @@
 							><span class="fun-n">n</span><span class="dot">.</span></h1
 						>
 						<p class="lead">Make your own favorite delicious meal.</p>
-						<button class="start-btn btn">Start now</button>
+						<!-- <button class="start-btn btn">Start now</button> -->
 					</div>
-					<div class="left-panel mx-5 my-5">
+					<div class="left-panel my-5">
 						<img
 							src="./bonbon-healthy-food-online-shopping.png"
 							class="hero-image"
@@ -78,9 +84,24 @@
 						/>
 					</div>
 				</div>
-			</div>
+				<div class="form">
+					<h4>Search your favorite dishes</h4>
+					<div class="filters d-flex justify-content-between">
+						<p>Diet</p>
+						<p>Dishes</p>
+						<p>Cuisines</p>
+					</div>
+					<div class="input-form">
+						<input type="text" class="form-control" placeholder="Enter email" />
+						<i class="fa-solid fa-magnifying-glass"></i>
+					</div>
+				</div>
+				<div class="foods">
+					<h4>Top foods</h4>
 
-			<!-- <div class="recipe_container"></div> -->
+					<div class="recipe_container"></div>
+				</div>
+			</div>
 		</main>
 
 		<script

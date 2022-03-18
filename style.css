@@ -47,5 +47,57 @@ body {
 }
 
 .hero-image {
-	max-width: 400px;
+	max-width: 200px;
+}
+
+/*  Search button */
+
+.form {
+	margin-top: 2em;
+}
+
+.input-form {
+	position: relative;
+	max-width: 150px;
+}
+
+.filters {
+	max-width: 200px;
+}
+
+.filters p {
+	cursor: pointer;
+	color: #a6a6a6;
+}
+
+.fa-solid {
+	position: absolute;
+	top: 10%;
+	right: 2%;
+	padding: 0.5em;
+	color: #a6a6a6;
+	cursor: pointer;
+}
+
+.foods {
+	margin-top: 2em;
+	height: 100vh;
+}
+
+/* foods */
+.recipe_card {
+	max-width: 300px;
+}
+
+.recipe_image {
+	max-width: 300px;
+	border-radius: 10px;
+}
+
+.recipe_title {
+	background-color: white;
+	padding: 0.5em;
+	bottom: 0;
+	right: 0%;
+	font-size: 14px;
 }
