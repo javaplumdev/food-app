@@ -4,6 +4,48 @@
 	box-sizing: border-box;
 }
 
-.recipe_image {
+body {
+	font-family: 'Poppins', sans-serif;
+	overflow-x: hidden;
+}
+
+/* navbar */
+
+.fo {
+	color: #903bb9;
+}
+
+.udies {
+	color: #6ccd6d;
+}
+
+.dot {
+	color: #e87525;
+}
+
+.start-btn {
+	background-color: #903bb9;
+	color: #fff;
+}
+
+/* Hero */
+
+.fun-f {
+	color: #903bb9;
+}
+
+.fun-u {
+	color: #6ccd6d;
+}
+
+.fun-n {
+	color: #f87f8a;
+}
+
+.hero-title {
+	font-size: 52px;
+}
+
+.hero-image {
 	max-width: 400px;
 }
