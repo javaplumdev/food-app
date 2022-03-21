@@ -1,94 +1,25 @@
-* {
-	padding: 0;
-	margin: 0;
-	box-sizing: border-box;
-}
-
-body {
-	font-family: 'Poppins', sans-serif;
-	overflow-x: hidden;
-}
-
-/* navbar */
-
-.fo {
+.f {
 	color: #903bb9;
 }
 
-.udies {
+.u {
 	color: #6ccd6d;
+}
+
+.n {
+	color: #f87f8a;
 }
 
 .dot {
 	color: #e87525;
 }
 
-.start-btn,
-.generate-btn {
+.btn {
 	background-color: #903bb9;
-	color: #fff;
+	color: white;
 }
 
-/* Hero */
-
-.fun-f {
-	color: #903bb9;
-}
-
-.fun-u {
-	color: #6ccd6d;
-}
-
-.fun-n {
-	color: #f87f8a;
-}
-
-.hero-title {
-	font-size: 52px;
-}
-
-.hero-image {
-	max-width: 200px;
-}
-
-/*  Search button */
-
-.form {
-	margin-top: 2em;
-}
-
-.input-form {
-	position: relative;
-	justify-content: center;
-}
-
-.filters {
-	max-width: 200px;
-}
-
-.filters p {
-	cursor: pointer;
-	color: #a6a6a6;
-}
-
-.fa-solid {
-	position: absolute;
-	top: 10%;
-	right: 2%;
-	padding: 0.5em;
-	color: #a6a6a6;
-	cursor: pointer;
-}
-
-.foods {
-	margin-top: 2em;
-	height: 100vh;
-	max-width: 1250px;
-}
-
-.recipe_img {
-	object-fit: cover;
-	max-width: 500px;
-	height: 300px;
-	border-radius: 10px;
+.btn:hover {
+	background-color: #702f91;
+	color: white;
 }

@@ -1,69 +1,37 @@
-// const api_key = `4fb26edefa3844e4ad2455ef77fc0d13`;
-// const api_url = `https://api.spoonacular.com/recipes/random?apiKey=${api_key}&number=10`;
+const btn = document.querySelector('.btn');
+const food_value = document.getElementById('food-value');
+const results = document.getElementById('results');
 
-// const recipe_container = document.querySelector('.recipe_container');
-// const recipe_card = document.querySelector('.recipe-card');
-
-// // Defining async function
-// async function getapi(api_url) {
-// 	// Storing response
-// 	const response = await fetch(api_url);
-
-// 	// Storing data in form of JSON
-// 	var data = await response.json();
-// 	const data_recipes = data.recipes;
-
-// 	console.log(data_recipes);
-
-// 	data_recipes.forEach((recipe) => {
-// 		// Creating divs
-// 		const create_div = document.createElement('div');
-
-// 		// console.log(recipe);
-
-// 		create_div.innerHTML = `
-// 		<div class="recipe_card text-center">
-// 			<p class="recipe_score rounded">${recipe.spoonacularScore}</p>
-// 			<p class="recipe_title rounded">${recipe.title}</p>
-// 			<img class="recipe_image" src=${recipe.image} />
-// 		</div>
-// 	`;
-
-// 		console.log(recipe.spoonacularScore);
-// 		recipe_container.appendChild(create_div);
-// 	});
-
-// 	recipe_card.addEventListener('click', () => {
-// 		console.log('first');
-// 	});
-// }
-// // Calling that async function
-// getapi(api_url);
-
-const generateButton = document.querySelector('.generate-btn');
-const api_url = `https://www.themealdb.com/api/json/v1/1/random.php`;
-const generate_div = document.querySelector('.generate-div');
+btn.addEventListener('click', function () {
+	const api_url = `https://www.themealdb.com/api/json/v1/1/search.php?s=${food_value.value}`;
+	get_api(api_url);
+});
 
 async function get_api(api_url) {
 	const response = await fetch(api_url);
-
-	// 	// Storing data in form of JSON
 	var data = await response.json();
-	let mealData = data.meals[0];
+	const mealData = data.meals;
 
-	const child_div = document.createElement('div');
-	child_div.innerHTML = `
-		<div>
-			<p>${mealData.strMeal}</p>
-			<img src='${mealData.strMealThumb}'	class="recipe_img rounded shadow"/>
-		</div>
-	`;
-
-	generate_div.appendChild(child_div);
+	showData(mealData);
 }
 
-generateButton.addEventListener('click', function () {
-	window.location.href = window.location.href;
-});
+function showData(mealData) {
+	const meals = mealData;
 
-get_api(api_url);
+	if (meals === null || food_value.value === '') {
+		results.innerHTML = `<p class="text-danger">Please enter a input fields</p>`;
+	} else {
+		results.innerHTML = meals.map(
+			(meal) => `
+			<div class="card" style="width: 18rem;">
+				<img class="card-img-top" src="${meal.strMealThumb}" alt="Card image cap">
+				<div class="card-body">
+					<h5 class="card-title">${meal.strMeal}</h5>
+					<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+					<a href="#" class="btn btn-primary">Cook this!</a>
+				</div>
+			</div>
+			`
+		);
+	}
+}
