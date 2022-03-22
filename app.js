@@ -18,6 +18,7 @@ async function get_api(api_url) {
 
 function showData(mealData) {
 	const meals = mealData;
+	console.log(meals);
 
 	console.log(meals);
 
@@ -30,10 +31,15 @@ function showData(mealData) {
 				<img class="card-img-top" src="${meal.strMealThumb}" alt="Card image cap">
 				<div class="card-body">
 					<h5 class="card-title">${meal.strMeal}</h5>
+<<<<<<< Updated upstream
 					<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
 					<button type="button" class="modalBtn btn btn-start">
 						Cook this!
 						</button>
+=======
+					<p class="card-text">${meal.strCategory}</p>
+					<a href="#" class="btn btn-primary">Cook this!</a>
+>>>>>>> Stashed changes
 				</div>
 			</div>
 			`
