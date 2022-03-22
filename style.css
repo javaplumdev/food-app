@@ -24,13 +24,14 @@
 	color: white;
 }
 
-<<<<<<< Updated upstream
-.modalContent {
-	display: none;
-=======
-.card {
-	height: auto;
+.btnShuffle {
+	background-color: #f87f8a;
+}
 
-	box-sizing: border-box;
->>>>>>> Stashed changes
+.btnShuffle:hover {
+	background-color: #d86e77;
+}
+
+.ingridients {
+	background-color: #cbd6cc;
 }
