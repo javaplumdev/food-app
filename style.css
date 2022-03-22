@@ -23,3 +23,7 @@
 	background-color: #702f91;
 	color: white;
 }
+
+.modalContent {
+	display: none;
+}
